@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.block_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 60px;
+    border-bottom: black solid 1px;
+    margin-bottom: 30px;
+}
+
+.menus_logotype{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.menus_logotype a{
+    text-decoration: none;
+}
+
+.menus_logotype span{
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: blue;
+    cursor: pointer;
+}
+
+.menus_logotype .transformSky{
+    color: black;
+    margin-left: 5px;
+}
+
+.menus_watching_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    height: 60px;
+}
+
+.menus_watching_content a{
+    text-decoration: none;
+}
+
+.menus_watching_content span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+}
+
+.menus_watching_content span:hover{
+    transform: scale(1.2);
+    color: blue;
+}
+
+.menus_reading_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.menus_reading_content a{
+    text-decoration: none;
+}
+
+.menus_reading_content span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+}
+
+.menus_reading_content span:hover{
+    transform: scale(1.2);
+    color: blue;
+}
+
+.block_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.recently_added_films{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+.recently_added_films span{
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.recently_added_serials{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+.recently_added_serials span{
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.recently_added_anime{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+.recently_added_anime span{
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.new_films{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+.img_named_films{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    margin-right: 10px;
+}
+
+.img_named_films img{
+    position: relative;
+    width: 250px;
+    height: 300px;
+}
+
+.hover_block{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.hover_block span{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 250px;
+    height: 300px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+}
+
+.new_serials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+.img_named_serials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.img_named_serials img{
+    width: 250px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.new_anime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+.img_named_anime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.img_named_anime img{
+    width: 250px;
+    height: 300px;
+    margin-bottom: 10px;
+}
