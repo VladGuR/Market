@@ -11,51 +11,175 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: #000117;
 }
 
 .block_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #000231;
+    margin-bottom: 30px;
+}
+
+.changeable_menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 95%;
     height: 60px;
-    border-bottom: black solid 1px;
-    margin-bottom: 30px;
 }
 
 .menus_logotype{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    margin-left: 10px;
+    width: 180px;
+    height: 60px;
     cursor: pointer;
+    color: #13a8fe;
+}
+
+.menu_burger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7px;
+    margin-right: 10px;
+}
+
+.menu_burger span{
+    width: 25px;
+    height: 2px;
+    background-color: lightgray;
+    margin-bottom: 5px;
+}
+
+.block_menu_content{
+    position: absolute;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: 100vh;
+    top: 60px;
+}
+
+.content_links{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 180px;
+    background-color: white;
+    margin: 10px 0 0 33px;
+    border-radius: 0 0 5px 5px;
 }
 
 .menus_logotype a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     text-decoration: none;
 }
 
 .menus_logotype span{
     font-family: 'Roboto Slab', serif;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 900;
-    color: blue;
+    color: white;
     cursor: pointer;
+    margin-right: 5px;
 }
 
-.menus_logotype .transformSky{
+.dark_light_theme_download_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+}
+
+.dark_light_theme_download_content .dark_light_theme{
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.dark_light_theme_download_content .dark_light_theme:hover{
+    fill: #13a8fe;
+}
+
+.dark_light_theme_download_content a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+}
+
+.dark_light_theme_download_content .download_content:hover{
+    cursor: pointer;
+    fill: #13a8fe;
+}
+
+.menu_field_search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    height: 60px;
+}
+
+.menu_field_search form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 32px;
+    border: #000231 solid 1px;
+}
+
+.menu_field_search input{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 420px;
+    height: 30px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    padding: 15px 7px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
     color: black;
-    margin-left: 5px;
+}
+
+.menu_field_search input:focus{
+    outline: none;
+}
+
+.menu_field_search button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    background-color: white;
+}
+
+.menu_field_search button:focus{
+    outline: none;
 }
 
 .menus_watching_content{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 60px;
+    flex-direction: column;
+    margin: 5px 0 0 0;
 }
 
 .menus_watching_content a{
@@ -66,25 +190,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    width: 180px;
+    height: 30px;
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
-    color: black;
+    color: #000117;
     cursor: pointer;
 }
 
 .menus_watching_content span:hover{
-    transform: scale(1.2);
     color: blue;
+    background-color: lightblue;
 }
 
 .menus_reading_content{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 130px;
-    height: 60px;
-    margin-right: 10px;
+    flex-direction: column;
+    width: 90%;
+    margin: 5px 0 10px 0;
+    border-top: #000117 solid 1px;
 }
 
 .menus_reading_content a{
@@ -95,26 +221,161 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    width: 180px;
+    height: 30px;
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
-    color: black;
+    color: #000117;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .menus_reading_content span:hover{
-    transform: scale(1.2);
     color: blue;
+    background-color: lightblue;
 }
 
 .users_avatar{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.users_avatar span{
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    color: white;
+    margin-right: 10px;
+}
+
+.block_with_user_content{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    width: 100%;
+    height: 100vh;
+    top: 60px;
+}
+
+.links_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 210px;
+    background-color: white;
+    border: lightgray solid 1px;
+    border-top: none;
+    z-index: 4000;
+    margin-right: 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+.links_btn a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+.links_btn span{
+    font-family: 'Roboto Slab', serif;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+}
+
+.user_page_links img{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color: black;
+    margin: 10px 10px 10px 0;
+}
+
+.user_page_links .user_fname_lname{
+    font-family: 'Roboto Slab', serif;
+    font-size: 13px;
+    color: #000231;
+}
+
+.featured_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.featured_content span{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 80%;
+    height: 30px;
+}
+
+.featured_content:hover{
+    background-color: lightblue;
+}
+
+.user_profile_editing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.user_profile_editing:hover{
+    background-color: lightblue;
+}
+
+.user_profile_editing span{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 80%;
+    height: 30px;
+}
+
+.links_btn form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border-top: #000231 solid 1px;
+    padding: 5px 0;
+}
+
+.links_btn button{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    height: 30px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    font-family: 'Roboto Slab', serif;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+}
+
+.user_page_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-bottom: #000231 1px solid;
 }
 
 .block_content{
@@ -132,13 +393,14 @@ body {
     flex-direction: column;
     width: 95%;
     margin-bottom: 10px;
+    padding-left: 10px;
 }
 
 .recently_added_films span{
     width: 100%;
     font-family: 'Roboto Slab', serif;
     font-size: 17px;
-    color: black;
+    color: white;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -151,13 +413,14 @@ body {
     flex-direction: column;
     width: 95%;
     margin-bottom: 10px;
+    padding-left: 10px;
 }
 
 .recently_added_serials span{
     width: 100%;
     font-family: 'Roboto Slab', serif;
     font-size: 17px;
-    color: black;
+    color: white;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -169,6 +432,7 @@ body {
     flex-direction: column;
     width: 95%;
     margin-bottom: 10px;
+    padding-left: 10px;
 }
 
 .recently_added_anime span{
@@ -176,7 +440,7 @@ body {
     font-family: 'Roboto Slab', serif;
     font-size: 17px;
     font-weight: bold;
-    color: black;
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -184,7 +448,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: #000231;
 }
 
 .img_named_films{
@@ -193,28 +460,30 @@ body {
     align-items: center;
     width: 250px;
     height: 300px;
-    margin-right: 10px;
+    margin: 5px 10px;
+    cursor: pointer;
 }
 
 .img_named_films img{
     position: relative;
     width: 250px;
     height: 300px;
+    border-radius: 3px;
 }
 
-.hover_block{
-    position: fixed;
+.hover_block_film{
+    position: absolute;
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 250px;
     height: 300px;
-    z-index: 1;
-    background-color: rgba(0,0,0,0.2);
+    z-index: 2;
+    background-color: rgba(0,0,0,0.6);
 }
 
-.hover_block span{
+.hover_block_film span{
     display: flex;
     justify-content: center;
     align-items: start;
@@ -227,11 +496,81 @@ body {
     margin-top: 50px;
 }
 
+.hover_block_serial{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.hover_block_serial span{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 250px;
+    height: 300px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+}
+
+.hover_block_anime{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.hover_block_anime span{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 250px;
+    height: 300px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+}
+
+.rating_stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rating_stars svg{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.rating_stars svg:hover{
+    fill: orange;
+}
+
 .new_serials{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 100%;
+    background-color: #000231;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .img_named_serials{
@@ -239,20 +578,24 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-right: 10px;
+    margin: 5px 10px;
 }
 
 .img_named_serials img{
     width: 250px;
     height: 300px;
-    margin-bottom: 10px;
+    border-radius: 3px;
 }
 
 .new_anime{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 100%;
+    background-color: #000231;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .img_named_anime{
@@ -260,11 +603,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-right: 10px;
+    margin: 5px 10px;
 }
 
 .img_named_anime img{
     width: 250px;
     height: 300px;
-    margin-bottom: 10px;
+    border-radius: 3px;
 }

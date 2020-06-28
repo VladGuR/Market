@@ -7,32 +7,111 @@
           rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 <div class="block_menu">
-    <div class="menus_logotype">
-        <a href="index.html">
-            <span>Night</span>
-            <span class="transformSky">Sky</span>
-        </a>
+    <div class="changeable_menu">
+        <div class="menus_logotype" onmouseover="showMenuLinks()" onmouseout="closeMenuLinks()">
+            <div class="menu_burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="index.html">
+                <span>Night</span>
+                <span class="transformSky">Sky</span>
+            </a>
+        </div>
+
+
+        <div class="dark_light_theme_download_content">
+            <svg class="dark_light_theme" fill="white" width="30" height="30" viewBox="0 0 24 24">
+                <title>Сменить тему</title>
+                <path d="M7.5,2C5.71,3.15 4.5,5.18 4.5,7.5C4.5,9.82 5.71,11.85 7.53,13C4.46,13 2,10.54 2,7.5A5.5,5.5 0 0,1 7.5,2M19.07,3.5L20.5,4.93L4.93,20.5L3.5,19.07L19.07,3.5M12.89,5.93L11.41,5L9.97,6L10.39,4.3L9,3.24L10.75,3.12L11.33,1.47L12,3.1L13.73,3.13L12.38,4.26L12.89,5.93M9.59,9.54L8.43,8.81L7.31,9.59L7.65,8.27L6.56,7.44L7.92,7.35L8.37,6.06L8.88,7.33L10.24,7.36L9.19,8.23L9.59,9.54M19,13.5A5.5,5.5 0 0,1 13.5,19C12.28,19 11.15,18.6 10.24,17.93L17.93,10.24C18.6,11.15 19,12.28 19,13.5M14.6,20.08L17.37,18.93L17.13,22.28L14.6,20.08M18.93,17.38L20.08,14.61L22.28,17.15L18.93,17.38M20.08,12.42L18.94,9.64L22.28,9.88L20.08,12.42M9.63,18.93L12.4,20.08L9.87,22.27L9.63,18.93Z"/>
+            </svg>
+            <a href="download_content.html">
+                <svg class="download_content" fill="white" width="30" height="30" viewBox="0 0 32 32">
+                    <title>Скачать</title>
+                    <polygon points="18,13.5 14,13.5 14,21.5 11,21.5 16,27.5 21,21.5 18,21.5"/>
+                    <path d="M27.586,12.712C26.66,10.251,24.284,8.5,21.5,8.5c-0.641,0-1.26,0.093-1.846,0.266
+                        C18.068,6.205,15.233,4.5,12,4.5c-4.904,0-8.894,3.924-8.998,8.803C1.207,14.342,0,16.283,0,18.5c0,3.312,2.688,6,6,6h4.5
+                        l-1.667-2H5.997C3.794,22.5,2,20.709,2,18.5c0-1.893,1.317-3.482,3.087-3.896C5.029,14.245,5,13.876,5,13.5c0-3.866,3.134-7,7-7
+                        c3.162,0,5.834,2.097,6.702,4.975c0.769-0.611,1.739-0.975,2.798-0.975c2.316,0,4.225,1.75,4.473,4h0.03
+                        c2.203,0,3.997,1.791,3.997,4c0,2.205-1.789,4-3.997,4h-2.836l-1.667,2H26c3.312,0,6-2.693,6-6
+                        C32,15.735,30.13,13.407,27.586,12.712z"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="menu_field_search">
+            <form method="post">
+                <input type="text" placeholder="Ищем...">
+                <button>
+                    <svg fill="#000117" width="25" height="25" viewBox="0 0 32 32">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <div class="users_avatar" onclick="showBlockUserContent()">
+            <span>Владислав</span>
+            <svg fill="#13a8fe" width="13" height="13" viewBox="0 0 284.929 284.929">
+                <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                    L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
+            </svg>
+        </div>
     </div>
-    <div class="menus_watching_content">
-        <a href="#">
-            <span>Фильмы</span>
-        </a>
-        <a href="#">
-            <span>Сериалы</span>
-        </a>
-        <a href="#">
-            <span>Аниме</span>
-        </a>
+</div>
+
+<div class="block_menu_content" style="display: none">
+    <div class="content_links" onmouseover="showMenuLinks()" onmouseout="closeMenuLinks()">
+        <div class="menus_watching_content">
+            <a href="films.html">
+                <span>Фильмы</span>
+            </a>
+            <a href="serials.html">
+                <span>Сериалы</span>
+            </a>
+            <a href="anime.html">
+                <span>Аниме</span>
+            </a>
+        </div>
+        <div class="menus_reading_content">
+            <a href="books.html">
+                <span>Книги</span>
+            </a>
+            <a href="manga.html">
+                <span>Манга</span>
+            </a>
+        </div>
     </div>
-    <div class="menus_reading_content">
+</div>
+
+
+<div class="block_with_user_content" style="display: none" onclick="closeBlockUserContent()">
+    <div class="links_btn">
         <a href="">
-            <span>Книги</span>
+            <div class="user_page_links">
+                <img src="img/Body.jpg" alt="">
+                <span class="user_fname_lname">Владислав Лотарев</span>
+            </div>
         </a>
         <a href="">
-            <span>Манга</span>
+            <div class="featured_content">
+                <span>Избранное</span>
+            </div>
         </a>
+        <a href="">
+            <div class="user_profile_editing">
+                <span>Настройки</span>
+            </div>
+        </a>
+        <form method="post">
+            <button class="exit_btn">
+                Выход
+            </button>
+        </form>
     </div>
 </div>
 
@@ -41,13 +120,42 @@
         <span>Новинки кино</span>
         <div class="new_films">
             <div class="img_named_films" onmouseover="changesOnNewDiv()"
-                     onmouseout="changesOnOldDiv()">
-                <img src="img/Body.jpg" alt="">
-                <div id="named_film" class="hover_block">
+                 onmouseout="changesOnOldDiv()">
+                <img id="imgSlider" src="img/Body.jpg" alt="">
+                <div class="named_film hover_block_film">
                     <span>Avangers</span>
-                    <svg fill="yellow" width="20" height="20" viewBox="0 0 32 32">
-                        <path d="M29.895,12.52c-0.235-0.704-0.829-1.209-1.549-1.319l-7.309-1.095l-3.29-6.984C17.42,2.43,16.751,2,16,2  s-1.42,0.43-1.747,1.122l-3.242,6.959l-7.357,1.12c-0.72,0.11-1.313,0.615-1.549,1.319c-0.241,0.723-0.063,1.507,0.465,2.046  l5.321,5.446l-1.257,7.676c-0.125,0.767,0.185,1.518,0.811,1.959c0.602,0.427,1.376,0.469,2.02,0.114l6.489-3.624l6.581,3.624  c0.646,0.355,1.418,0.311,2.02-0.114c0.626-0.441,0.937-1.192,0.811-1.959l-1.259-7.686l5.323-5.436  C29.958,14.027,30.136,13.243,29.895,12.52z/>
-                    </svg>
+                    <div class="rating_stars">
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,18 +163,88 @@
     <div class="recently_added_serials">
         <span>Новинки сериалов</span>
         <div class="new_serials">
-            <div class="img_named_serials">
-                <img src="img/Body.jpg" alt="" onmouseover="changesOnNewDiv()" onmouseout="changesOnOldDiv()">
-                <span>Doom</span>
+            <div class="img_named_serials" onmouseover="changesOnNewDiv()"
+                 onmouseout="changesOnOldDiv()">
+                <img id="imgSerialSlider" src="img/Body.jpg" alt="">
+                <div class="named_serial hover_block_serial">
+                    <span>Avangers</span>
+                    <div class="rating_stars">
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="recently_added_anime">
         <span>Новинки аниме</span>
         <div class="new_anime">
-            <div class="img_named_anime">
-                <img src="img/Body.jpg" alt="" onmouseover="changesOnNewDiv()" onmouseout="changesOnOldDiv()">
-                <span>Dark castle</span>
+            <div class="img_named_anime" onmouseover="changesOnNewDiv()"
+                 onmouseout="changesOnOldDiv()">
+                <img id="imgAnimeSlider" src="img/Body.jpg" alt="">
+                <div class="named_anime hover_block_anime">
+                    <span>Avangers</span>
+                    <div class="rating_stars">
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                        <svg fill="white" width="20" height="20" viewBox="0 0 88 88">
+                            <g>
+                                <polygon
+                                        points="44,0 55.939,33.612 88,33.612 61.842,53.351 71.193,88 44,67.226 16.809,88 26.158,53.351 0,33.612 32.061,33.612"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
